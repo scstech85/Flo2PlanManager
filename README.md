@@ -67,4 +67,4 @@ The file named **output.json** contains all the information about each downloade
 ```
 Each file has a **key**, the downloading result (**result**) and other informations related to the original URL image path. 
 The values for result are **OK** or **KO**. If you find some items where result is **KO** this means 
-you cannot downloaed the related file from the specific URL. In this case, please contact us to have that images.  
+you cannot download the related file from the specific URL. In this case, please contact us to have that images.  
