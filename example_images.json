@@ -1,0 +1,28 @@
+{
+  "name": "Flo2Plan",
+  "type": "trainingset",
+  "data_captured": "2019-02-15 17:43:09.959844",
+  "images": [
+    {
+      "key": "G0592",
+      "url": "http://www.michaelplater.com/j/2017/07/toll-brothers-northern-va-toll-brothers-new-jersey-toll-brothers-floor-plans-toll-brothers-mn-toll-brothers-chicago-tollbros-toll-brothers-design-your-own-home-toll-brothers-scottsdale-jewe.jpg",
+      "width": 920,
+      "height": 1146,
+      "fpath": "G0592.png"
+    },
+    {
+      "key": "G0375",
+      "url": "https://cdn.tollbrothers.com/models/cosenza_II_10613_/floorplans/royal_palm_signature/cosenza_II2_920.png",
+      "width": 920,
+      "height": 1184,
+      "fpath": "G0375.png"
+    },
+    {
+      "key": "G0423",
+      "url": "https://i0.wp.com/www.newcondolaunchonline.com/wp-content/uploads/2015/06/High-Park-Residences-Floor-Plan-2C1-2-Bedroom-Classic.png?fit=922%2C922&ssl=1",
+      "width": 922,
+      "height": 922,
+      "fpath": "G0423.png"
+    }
+  ]
+}
