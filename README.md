@@ -18,6 +18,7 @@ You need install [Anaconda](https://www.continuum.io/downloads), then run below:
 
 conda create --name flo2 python=3.6
 source activate flo2
+#pycocotools (https://github.com/cocodataset/cocoapi/tree/master/PythonAPI)
 conda install -c hcc pycocotools
 ```
 Usage
