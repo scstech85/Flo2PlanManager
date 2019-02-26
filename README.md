@@ -25,7 +25,7 @@ Usage
 
 **Download images**
 
-You can find the list of image files on the competion website as a JSON file. Having JSON file, it is possible to download the imageset using the next command:
+You can find the list of image files on the competion website as a JSON file. Having that JSON file, it is possible to download the imageset using the next command:
 ```
 #command
 ./download_dataset.py <json_file> --dir <local_dir>
