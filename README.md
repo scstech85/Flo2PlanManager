@@ -1,5 +1,7 @@
-# Flo2PlanManager
-Manage the dataset for the competition
+# Flo<sup>2</sup>Plan Dataset Manager
+***Flo***rence ***Flo***or Plan is an image dataset for ORF competition (). 
+This tool is useful to manage the dataset and evaluate the results.
+
 
 Requirements
 ------------
