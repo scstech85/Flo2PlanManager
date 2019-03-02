@@ -74,5 +74,17 @@ Each file has a **key**, the downloading result (**result**) and other informati
 The values for result are **OK** or **KO**. If you find some items where result is **KO** this means 
 you cannot download the related file from the specific URL. In this case, please contact us.
 
+**Visualize Instances**
+It is possible to visualize the instances on image using the following script:
+```
+#visualize
+./visual_instances_image.py <instances_json_file> --img_dir <image_dir_path> --key <image_key>
+```
+
 **Evaluate results**  
-Coming soon...
+In order to evaluate your results, you can use the following script:
+```
+#evaluate
+./evaluation_results.py ....... ??? ......
+```
+coming soon
