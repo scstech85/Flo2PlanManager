@@ -18,6 +18,7 @@ You need install [Anaconda](https://www.continuum.io/downloads), then run below:
 
 conda create --name flo2 python=3.6
 source activate flo2
+#pycocotools (https://github.com/cocodataset/cocoapi/tree/master/PythonAPI)
 conda install -c hcc pycocotools
 ```
 Usage
@@ -25,12 +26,16 @@ Usage
 
 **Download images**
 
-You need to download from the competion website the JSON file to download the dataset images.
+You can find the list of image files on the competion website as a JSON file. Having that JSON file, it is possible to download the imageset using the next command:
+```
+#command
+./download_dataset.py <json_file> --dir <local_dir>
+```
+In this repository you can find one JSON file (an example) to try the command.
 
-In this repository you can find one JSON file (an example) to try the commands.
-
-```bash
-./download_dataset.py example_images.json --dir '.'
+```
+#run the example:
+./download_dataset.py example_images.json --dir .
 ```
 
 In this way you can download the images and create the dataset directories inside your local path.
@@ -65,9 +70,9 @@ The file named **output.json** contains all the information about each downloade
   }
 ]
 ```
-Each file has a **key**, the downloading result (**result**) and other informations related to the original URL image path. 
+Each file has a **key**, the downloading result (**result**) and other information related to the original URL image path. 
 The values for result are **OK** or **KO**. If you find some items where result is **KO** this means 
-you cannot download the related file from the specific URL. In this case, please contact us to have that images.
+you cannot download the related file from the specific URL. In this case, please contact us.
 
 **Evaluate results**  
-soon
+Coming soon...
