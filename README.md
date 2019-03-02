@@ -75,6 +75,7 @@ The values for result are **OK** or **KO**. If you find some items where result 
 you cannot download the related file from the specific URL. In this case, please contact us.
 
 **Visualize Instances**
+
 It is possible to visualize the instances on image using the following script:
 ```
 #visualize
