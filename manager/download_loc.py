@@ -58,7 +58,7 @@ class ManageData:
             with open(loc_out_file, 'wb') as f_out:
                 f_out.write(raw_img)
 
-            print('Local File:', loc_out_file, os.path.isfile(loc_out_file))
+            print('Temporary Local File:', loc_out_file, os.path.isfile(loc_out_file))
             im = Image.open(loc_out_file)
             return im
 
