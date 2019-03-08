@@ -68,7 +68,7 @@ class ManageData:
 
             # row['fname'] = os.path.join(trg_dir, path)
 
-            print(trg_file)
+            print('Saved File:', trg_file)
             save(im, trg_file)
 
 
@@ -81,7 +81,7 @@ class ManageData:
 
         if not os.path.isdir(tmp_loc_dir):
             os.makedirs(tmp_loc_dir)
-            print(tmp_loc_dir)
+            print('Temporary Dir:', tmp_loc_dir)
 
         target, images_dir = self.create_directory(base_path)
         results  = []
