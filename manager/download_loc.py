@@ -53,12 +53,12 @@ class ManageData:
 
             loc_out_file = os.path.join(tmp_loc_dir, 'tmp'+'.'+type)
 
-            print(os.path.isdir(tmp_loc_dir), loc_out_file)
+            #print(os.path.isdir(tmp_loc_dir), loc_out_file)
 
             with open(loc_out_file, 'wb') as f_out:
                 f_out.write(raw_img)
 
-            print(loc_out_file, os.path.isfile(loc_out_file))
+            print('Local File:', loc_out_file, os.path.isfile(loc_out_file))
             im = Image.open(loc_out_file)
             return im
 
