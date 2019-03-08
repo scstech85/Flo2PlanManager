@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import argparse
-from  manager.download_loc import ManageData
+from  manager.download import ManageData
 
 def run(filename, loc_dir):
     manager = ManageData(filename)
