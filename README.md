@@ -83,6 +83,23 @@ It is possible to visualize the instances on image using the following script:
 #visualize
 ./visual_instances_image.py <instances_json_file> --img_dir <image_dir_path> --key <image_key>
 ```
+The key_img is the image key which you can find inside the JSON file to download files (example: example_image.json).
+If you use the key_img as ALL you can create a local directory where the script will save the overlayed image with instance masks.
+Otherwise, if key_img is empy, the script will sample a random key from the ground truth.
+```
+#random image from dataset
+./visual_instances_image.py example_instances.json --img_dir Flo2Plan/trainingset/images
+```
+
+```
+#image with key G0423
+/visual_instances_image.py example_instances.json --img_dir Flo2Plan/trainingset/images --key G0423
+```
+
+```
+#salve all the overlayed images in local directory
+/visual_instances_image.py example_instances.json --img_dir Flo2Plan/trainingset/images --key ALL --save_path local
+```
 
 **Evaluate results**  
 In order to evaluate your results, you can use the following script:
