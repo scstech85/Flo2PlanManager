@@ -4,7 +4,7 @@ import numpy as np
 from  manager.visual import ManageCOCO, visual
 import os
 import shutil
-def run(json_path, img_path, key=None, show=True, save_file=False, save_path='local'):
+def run(json_path, img_path, key=None, show=True, save_file=False, save_path='local', type='segmentation'):
 
 
     manager = ManageCOCO(json_path, img_path)
@@ -30,7 +30,7 @@ def run(json_path, img_path, key=None, show=True, save_file=False, save_path='lo
 
         print('Image path:', p)
 
-        im = visual(p, ann, colors, show=show)
+        im = visual(p, ann, colors, show=show, type=type)
         if save_file:
             a, b = os.path.split(p)
             fpath = os.path.join(save_path, b)

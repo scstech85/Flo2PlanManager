@@ -61,7 +61,7 @@ class ManageCOCO:
 
 from PIL import Image, ImageDraw
 
-def visual(img_path, anns, colors, show=False):
+def visual(img_path, anns, colors, show=False, type='segmentation'):
 
     image = Image.open(img_path).convert('RGBA')
     layer = Image.new('RGBA', image.size, (255, 255, 255, 0))
@@ -70,18 +70,32 @@ def visual(img_path, anns, colors, show=False):
     #bbox = (500, 600, 0, 750)  # endwidth,startheight,startwidth,endheight
     #draw.rectangle(bbox, fill=(255, 0, 0, 180))
 
+    if type == 'segmentation':
 
-
-    for ann in anns:
-        category_name = ann['category_name']
-        for seg in ann['segmentation']:
-            poly = np.array(seg,dtype=np.int).reshape((int(len(seg) / 2), 2))
+        for ann in anns:
+            category_name = ann['category_name']
+            for seg in ann[type]:
+                poly = np.array(seg,dtype=np.int).reshape((int(len(seg) / 2), 2))
+                #print(category_name, poly, poly.shape)
+                c = colors[ann['category_id']]
+                #print('col', c)
+                #poly = np.array(seg).reshape((int(len(seg) / 2), 2))
+                draw.polygon([(x,y) for x, y in poly],
+                              fill=(c[0], c[1], c[2], 127), outline=(c[0], c[1], c[2], 255))
+    else:
+        for ann in anns:
+            category_name = ann['category_name']
+            bbox = ann[type]
+            #poly = np.array(seg,dtype=np.int).reshape((int(len(seg) / 2), 2))
             #print(category_name, poly, poly.shape)
             c = colors[ann['category_id']]
             #print('col', c)
             #poly = np.array(seg).reshape((int(len(seg) / 2), 2))
-            draw.polygon([(x,y) for x, y in poly],
-                          fill=(c[0], c[1], c[2], 127), outline=(c[0], c[1], c[2], 255))
+            #draw.polygon([(x,y) for x, y in poly], fill=(c[0], c[1], c[2], 127), outline=(c[0], c[1], c[2], 255))
+            x,y, width, height = bbox
+
+            draw.rectangle([(x,y),(x + width, y + height)], fill=(c[0], c[1], c[2], 127), outline=(c[0], c[1], c[2], 255))
+
 
     image = Image.alpha_composite(image, layer)
     if show:
